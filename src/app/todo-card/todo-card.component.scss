@@ -1,0 +1,21 @@
+.todoCard {
+  display: block;
+  padding: 5px;
+  border: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+
+  .deleteBtn {
+    margin-left: auto;
+  }
+
+  .btn {
+    cursor: pointer;
+    transition: all 150ms;
+
+    &:hover {
+      color: var(--color);
+    }
+  }
+}

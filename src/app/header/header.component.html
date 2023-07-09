@@ -1,0 +1,15 @@
+<header>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Add your Todo</mat-label>
+      <input
+        matInput
+        [(ngModel)]="inputValue"
+        [ngModelOptions]="{ standalone: true }"
+        search
+        placeholder="read a Book"
+      />
+    </mat-form-field>
+  </form>
+  <button mat-raised-button (click)="getValue()" color="primary">Add</button>
+</header>

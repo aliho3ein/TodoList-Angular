@@ -1,0 +1,53 @@
+<div class="todoCard" *ngIf="tab === 'start' && !data.start && !data.done">
+  <span>{{ data.title }}</span>
+  <mat-icon
+    style="--color: #aa0000"
+    (click)="todoAction.deleteTodo(data.id)"
+    class="deleteBtn btn"
+  >
+    delete
+  </mat-icon>
+  <mat-icon
+    style="--color: #00ad00"
+    class="btn"
+    (click)="todoAction.startTodo(data.id)"
+  >
+    done
+  </mat-icon>
+</div>
+
+<div class="todoCard" *ngIf="tab === 'progress' && data.start && !data.done">
+  <span>{{ data.title }}</span>
+  <mat-icon
+    style="--color: #aa0000"
+    (click)="todoAction.deleteTodo(data.id)"
+    class="deleteBtn btn"
+  >
+    delete
+  </mat-icon>
+  <mat-icon
+    class="btn"
+    style="--color: #00ad00"
+    (click)="todoAction.doneTodo(data.id)"
+  >
+    check_circle_outline
+  </mat-icon>
+</div>
+
+<div class="todoCard" *ngIf="tab === 'done' && data.done">
+  <span>{{ data.title }}</span>
+  <mat-icon
+    style="--color: #aa0000"
+    (click)="todoAction.deleteTodo(data.id)"
+    class="deleteBtn btn"
+  >
+    delete
+  </mat-icon>
+  <mat-icon
+    style="--color: #bada55"
+    class="btn"
+    (click)="todoAction.refreshTodo(data.id)"
+  >
+    refresh
+  </mat-icon>
+</div>
